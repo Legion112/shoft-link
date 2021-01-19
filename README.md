@@ -12,4 +12,9 @@
 ```shell
 docker-compose up
 ```
+Inside fpm service install [composer](https://getcomposer.org/)
+```shell
+composer install
+```
+
 Change permission var directory `sudo chown -R www-data:www-data var`
