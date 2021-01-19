@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  nginx:
+    ports:
+    - 8080:80
+    build: .docker/nginx/
+    volumes:
+      - .:/var/www/app:cached
+  fpm:
+    image: php:7.4-fpm
+    volumes:
+      - .:/var/www/app:cached
